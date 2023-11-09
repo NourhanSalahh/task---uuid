@@ -1,4 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import VueGoogleMaps from '@fawmi/vue-google-maps';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+// Use VueGoogleMaps with your API key and any additional configuration
+app.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyAFp165fHH3fpXVJpV5eKV059_Ok95PLJg', // Replace with your Google Maps 
+    v: 'weekly',
+  },
+
+});
+
+
+app.mount('#app');
